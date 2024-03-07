@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag Race Simulator</title>
+    <link rel="icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="css/style.light.css">
+    <script defer src="javascript/index.js"></script>
+    <script src="https://kit.fontawesome.com/65fd17a1f9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="dMainTitle">
+        <h1 id="MainTitle">Drag Race Simulator!</h1>
+    </div>
+
+
+    <div id ="MainBlock">
+        <h2><img src="image/flags/USAFlag.webp" class="countryFlag"> Drag Race US <img src="image/flags/USAFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(us_season1, 'regular', 'top3')">US Season 1</button>
+            <button onclick="predefCast(us_season2, 'regular', 'top3')">US Season 2</button>
+            <button onclick="predefCast(us_season3, 'regular', 'top3', '', 'return')">US Season 3</button>
+            <button onclick="predefCast(us_season4, 'regular', 'top3', '', 'return')">US Season 4</button>
+            <button onclick="predefCast(us_season5, 'regular', 'top3')">US Season 5</button>
+            <button onclick="predefCast(us_season6, 'regular', 'top4', 's6-premiere')">US Season 6</button>
+            <button onclick="predefCast(us_season7, 'regular', 'top4', '', 'conjoined-queens')">US Season 7</button>
+            <button onclick="predefCast(us_season8, 'regular', 'top4', '', 'return')">US Season 8</button>
+            <button onclick="predefCast(us_season9, 'regular', 'LFTC', 's9-premiere')">US Season 9</button>
+            <button onclick="predefCast(us_season10, 'regular', 'LFTC')">US Season 10</button>
+            <button onclick="predefCast(us_season11, 'regular', 'LFTC')">US Season 11</button>
+            <button onclick="predefCast(us_season12, 'regular', 'top3', 's12-premiere')">US Season 12</button>
+            <button onclick="predefCast(us_season13, 'regular', 'LFTC', 'porkchop')">US Season 13</button>
+            <button onclick="predefCast(us_season14, 'regular', 'top5', 's14-premiere')">US Season 14</button>
+            <button onclick="predefCast(us_season15, 'regular', 'top3')">US Season 15</button>
+            <button onclick="predefCast(us_season16, 'regular', 'top3')">US Season 16</button>
+        </div>
+        
+        <h2><img src="image/flags/StarFlag.webp" class="countryFlag"> All Stars <img src="image/flags/StarFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(allstars_1, 'team', 'teams')">All Stars Season 1</button>
+            <button onclick="predefCast(allstars_2, 'all-stars', 'top4', '', 'queensofcomedy')">All Stars Season 2</button>
+            <button onclick="predefCast(allstars_3, 'all-stars', 'jury', '', 'kittygirlgroup')">All Stars Season 3</button>
+            <button onclick="predefCast(allstars_4, 'all-stars', 'teams', '', 'lalaparuza')">All Stars Season 4</button>
+            <button onclick="predefCast(allstars_5, 'lipsync-assassin', 'top3')">All Stars Season 5</button>
+            <button onclick="predefCast(allstars_6, 'lipsync-assassin', 'top4', '', 'smackdown')">All Stars Season 6</button>
+            <button onclick="predefCast(allstars_7, 'all-winners', 'LFTC', '', '')">All Stars Season 7</button>
+            <button onclick="predefCast(allstars_8, 'lipsync-assassin', 'top2')">All Stars Season 8</button>
+        </div>
+
+        <h2><img src="image/flags/GlobalFlag.webp" class="countryFlag"> vs The World <img src="image/flags/GlobalFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(ukvstw_1, 'all-stars', 'LFTC')">UK vs The World 1</button>
+            <button onclick="predefCast(ukvstw_2, 'all-stars', 'LFTC')">UK vs The World 2</button>
+            <button onclick="predefCast(canvstw, 'all-stars', 'LFTC')">Canada vs The World</button>
+        </div>
+
+        <h2><img src="image/flags/UKFlag.webp" class="countryFlag"> Drag Race UK <img src="image/flags/UKFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(uk_season1, 'regular', 'top3')">UK Season 1</button>
+            <button onclick="predefCast(uk_season2, 'regular', 'top4', '', 'vote')">UK Season 2</button>
+            <button onclick="predefCast(uk_season3, 'regular', 'top3', 'uk3-premiere')">UK Season 3</button>
+            <button onclick="predefCast(uk_season4, 'regular', 'teams')">UK Season 4</button>
+            <button onclick="predefCast(uk_season5, 'regular', 'top3')">UK Season 5</button>
+        </div>
+
+        <h2><img src="image/flags/CanadaFlag.webp" class="countryFlag"> Canada's Drag Race <img src="image/flags/CanadaFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(can_season1, 'regular', 'top3')">CAN Season 1</button>
+            <button onclick="predefCast(can_season2, 'regular', 'LFTF')">CAN Season 2</button>
+            <button onclick="predefCast(can_season3, 'regular', 'teams')">CAN Season 3</button>
+            <button onclick="predefCast(can_season4, 'regular', 'teams')">CAN Season 4</button>
+        </div>
+
+        <h2><img src="image/flags/SpainFlag.webp" class="countryFlag"> Drag Race España <img src="image/flags/SpainFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(dres_season1, 'regular', 'top3')">ESP Season 1</button>
+            <button onclick="predefCast(dres_season2, 'regular', 'top4')">ESP Season 2</button>
+            <button onclick="predefCast(dres_season3, 'regular', 'teams', '', 'reinasdelacomedia')">ESP Season 3</button>
+        </div>
+        
+        <h2><img src="image/flags/AustraliaFlag.webp" class="countryFlag"> <img src="image/flags/NewZealandFlag.webp" class="countryFlag"> Drag Race Down Under <img src="image/flags/AustraliaFlag.webp" class="countryFlag"> <img src="image/flags/NewZealandFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(drdu_season1, 'regular', 'top4', '' , 'return')">DU Season 1</button>
+            <button onclick="predefCast(drdu_season2, 'regular', 'top3')">DU Season 2</button>
+            <button onclick="predefCast(drdu_season3, 'regular', 'top3')">DU Season 3</button>
+        </div>
+
+        <h2><img src="image/flags/ItalyFlag.webp" class="countryFlag"> Drag Race Italia <img src="image/flags/ItalyFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(drita, 'regular', 'top4')">ITA Season 1</button>
+            <button onclick="predefCast(drita_season2, 'regular', 'top4')">ITA Season 2</button>
+            <button onclick="predefCast(drita_season3, 'regular', 'teams')">ITA Season 3</button>
+        </div>
+        
+        <h2><img src="image/flags/ThailandFlag.webp" class="countryFlag"> Drag Race Thailand <img src="image/flags/ThailandFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(drt_season1, 'thailand', 'top3')">THAI Season 1</button>
+            <button onclick="predefCast(drt_season2, 'thailand', 'top3', '' , 'return')">THAI Season 2</button>
+        </div>
+
+        <h2><img src="image/flags/NetherlandsFlag.webp" class="countryFlag"> Drag Race Holland <img src="image/flags/NetherlandsFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(hol_season1, 'regular', 'top4')">HOLL Season 1</button>
+            <button onclick="predefCast(hol_season2, 'regular', 'top3')">HOLL Season 2</button>
+        </div>
+
+        <h2><img src="image/flags/FranceFlag.webp" class="countryFlag"> Drag Race France <img src="image/flags/FranceFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(drfr_season1, 'regular', 'LFTF')">FR Season 1</button>
+            <button onclick="predefCast(drfr_season2, 'regular', 'teams')">FR Season 2</button>
+        </div>
+
+        <h2><img src="image/flags/PhilippinesFlag.webp" class="countryFlag"> Drag Race Philippines <img src="image/flags/PhilippinesFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(drph_season1, 'regular', 'LFTC')">PH Season 1</button>
+            <button onclick="predefCast(drph_season2, 'regular', 'LFTC', 's12-premiere')">PH Season 2</button>
+        </div>
+        
+        <h2><img src="image/flags/BelgiumFlag.webp" class="countryFlag"> Drag Race Belgique <img src="image/flags/BelgiumFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(drbl_season1, 'regular', 'top3')">BE Season 1</button>
+            <button onclick="predefCast(drbl_season2, 'regular', 'top3')">BE Season 2</button>
+        </div>
+
+        <h2><img src="image/flags/SwedenFlag.webp" class="countryFlag"> Drag Race Sverige <img src="image/flags/SwedenFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(drsv, 'regular', 'top3', '' , 'readingIF')">SV Season 1</button>
+        </div>
+        
+        <h2><img src="image/flags/MexicoFlag.webp" class="countryFlag"> Drag Race México <img src="image/flags/MexicoFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(drmx, 'regular', 'top4')">MX Season 1</button>
+        </div>
+        
+        <h2><img src="image/flags/BrazilFlag.webp" class="countryFlag"> Drag Race Brasil <img src="image/flags/BrazilFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(drbr, 'regular', 'top4')">BR Season 1</button>
+        </div>
+
+        <h2><img src="image/flags/GermanyFlag.webp" class="countryFlag"> Drag Race Germany <img src="image/flags/GermanyFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(drgr, 'regular', 'top3')">GR Season 1</button>
+        </div>
+
+        <h2><img src="image/flags/StarFlag.webp" class="countryFlag"><img src="image/flags/SpainFlag.webp" class="countryFlag"> Drag Race España All Stars <img src="image/flags/SpainFlag.webp" class="countryFlag"><img src="image/flags/StarFlag.webp" class="countryFlag"></h2>
+        <div>
+            <button onclick="predefCast(allstars_es1, 'all-stars', 'top4')">ESP All Stars Season 1</button>
+        </div>
+        
+        <hr>
+        <h2><a href="index.html" id="inblock">Back to main page</a></h2>
+        <div id="result"></div>
+    </div>
+    <div class="optContainer">
+        <input type="checkbox" id="showOpt">
+        <div class="options">
+            <div>
+                <h3>Disable:</h3>
+                <p><input type="checkbox" id="disableDouble">Double Shantays and Sashays</p>
+                <p><input type="checkbox" id="riggory">Challenge Riggory</p>
+                <p><input type="checkbox" id="riggoryLipsync">Lipsync Riggory</p>
+                <h3>Immunity:</h3>
+                <p><input type="checkbox" id="immunity"></p>
+                <h3>Lipsync Challenge:</h3>
+                <p><input type="checkbox" id="lipSyncCha"></p>
+                <h3>Chocolate Bar Twist:</h3>
+                <p><input type="checkbox" id="chocolateBar"> Random</p>
+                <p><input type="checkbox" id="chocolateBarChoosable"> Choosable</p>
+                <h3>Fame Games:</h3>
+                <p><input type="checkbox" id="famegames"></p>
+                <h3>Style:</h3>
+                <p><input type="checkbox" id="background"> Solid background</p>
+            </div>
+        </div>
+        <div class="btn-mas">
+            <label for="showOpt" class="optTxt"> Options</label>
+        </div>
+    </div>
+    <a href="#" class="toTop">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+        kofiWidgetOverlay.draw('arainbow4u', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Tip Me',
+        'floating-chat.donateButton.background-color': '#5bc0de',
+        'floating-chat.donateButton.text-color': '#323842'
+        });
+    </script>
+</body>
+</html>
