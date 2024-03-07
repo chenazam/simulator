@@ -10181,7 +10181,7 @@ class Queen {
         } else if (custom == true) {
             this.image = image;
         } else {
-            this.image = `https://myrainboww.github.io/Drag-Race-Simulator/image/queens/${image}.jpg`;
+            this.image = `https://myrainboww.github.io/Drag-Race-Simulator/image/queens/${image}.webp`;
         }
     }
     _calculateScores(min, max, stat = 0) {
