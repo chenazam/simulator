@@ -10177,11 +10177,11 @@ class Queen {
         this._runwayStat = runway;
         this._lipsyncStat = lipsync;
         if (image == "noimage") {
-            this.image = "image/queens/noimage.jpg";
+            this.image = "https://myrainboww.github.io/image/queens/noimage.jpg";
         } else if (custom == true) {
             this.image = image;
         } else {
-            this.image = `image/queens/${image}.jpg`;
+            this.image = `https://myrainboww.github.io/image/queens/${image}.jpg`;
         }
     }
     _calculateScores(min, max, stat = 0) {
